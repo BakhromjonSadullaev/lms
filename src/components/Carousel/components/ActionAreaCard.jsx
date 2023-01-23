@@ -23,10 +23,11 @@ function ActionAreaCard({
 }) {
   const [toggleLinks, setToggleLinks] = useState(false);
   return (
-    <Card sx={{ width: 250, height: 380, m: 5 }}>
+    <Card sx={{ width: 250, height: 450, m: 5 }}>
       <CardActionArea
         sx={{ height: "100%" }}
-        onClick={() => setToggleLinks((state) => !state)}
+        onMouseEnter={() => setToggleLinks(true)}
+        onMouseLeave={() => setToggleLinks(false)}
       >
         {!toggleLinks && (
           <>
@@ -38,13 +39,18 @@ function ActionAreaCard({
               alt="student"
             />
             <CardContent>
-              <Typography gutterBottom variant="body2" color="text.secondary">
+              <Typography
+                gutterBottom
+                variant="body2"
+                color="text.secondary"
+                sx={{ pb: 2 }}
+              >
                 {info1}
               </Typography>
               <Typography variant="h6" sx={{ height: 90, fontWeight: "bold" }}>
                 {info2}
               </Typography>
-              <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+              <Typography variant="body1" sx={{ fontWeight: "bold", pb: 2 }}>
                 {info3}
               </Typography>
               <Grid
@@ -52,7 +58,7 @@ function ActionAreaCard({
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="center"
-                sx={{ m: 0, p: 0 }}
+                sx={{ pb: 2 }}
               >
                 <Grid item sx={{ m: 0, p: 0 }}>
                   <StarIcon sx={{ color: "#F9851A" }} />
@@ -67,7 +73,7 @@ function ActionAreaCard({
                   </Typography>
                 </Grid>
               </Grid>
-              <Typography variant="body1" color="text.secondary">
+              <Typography variant="body1" color="text.secondary" sx={{ pb: 2 }}>
                 {info6}
               </Typography>{" "}
               <Typography variant="body1" color="text.secondary">

@@ -130,7 +130,12 @@ function CarouselComponet({ title }) {
               width: 60,
               height: 60,
               minWidth: 60,
+              fontSize: "20px",
               alignSelf: "center",
+              borderRadius: "100%",
+              backgroundColor: "#E0EAF5",
+              color: "#00407A",
+              border: "none",
             },
           }}
           backwardBtnProps={{
@@ -139,7 +144,12 @@ function CarouselComponet({ title }) {
               width: 60,
               height: 60,
               minWidth: 60,
+              fontSize: "20px",
               alignSelf: "center",
+              borderRadius: "100%",
+              backgroundColor: "#E0EAF5",
+              color: "#00407A",
+              border: "none",
             },
           }}
           dotsNav={{
