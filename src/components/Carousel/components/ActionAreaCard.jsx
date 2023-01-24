@@ -1,13 +1,12 @@
 import React from "react";
+
+import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
-import Grid from "@mui/material/Grid";
-import picture from "../../../assets/students.jpg";
 
 import styles from "./ActionAreaCard.module.css";
 
@@ -21,22 +20,28 @@ function ActionAreaCard({
   info7,
   link1,
   link2,
+  index,
 }) {
+  function importAll(r) {
+    return r.keys().map(r);
+  }
+
+  const images = importAll(
+    require.context("../../../assets", false, /\.(png|jpe?g|svg)$/)
+  );
   return (
     <div>
       <Card sx={{ width: 270, height: 470, mr: 5 }} className={styles.card}>
         <div className={styles.cardOverlay}>
-          <button className={`${styles.btn} ${styles.btn1}`}>
-            강의 상세보기
-          </button>
-          <button className={`${styles.btn} ${styles.btn2}`}>수강신청</button>
+          <button className={`${styles.btn} ${styles.btn1}`}>{link1}</button>
+          <button className={`${styles.btn} ${styles.btn2}`}>{link2}</button>
         </div>
         <>
           {" "}
           <CardMedia
             component="img"
             height="140"
-            image={picture}
+            image={images[index]}
             alt="student"
           />
           <CardContent>

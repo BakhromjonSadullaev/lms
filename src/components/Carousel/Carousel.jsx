@@ -185,7 +185,7 @@ function CarouselComponet({ title }) {
             speed={400}
           >
             {data.map((d, i) => (
-              <ActionAreaCard key={i} {...d} />
+              <ActionAreaCard key={i} {...d} index={i} />
             ))}
           </Carousel>
         </Grid>
