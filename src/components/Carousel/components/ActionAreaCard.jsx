@@ -20,113 +20,123 @@ function ActionAreaCard({
   info7,
   link1,
   link2,
+  bool,
 }) {
-  const [toggleLinks, setToggleLinks] = useState(false);
+  const [toggleLinks, setToggleLinks] = useState(bool);
   return (
-    <Card sx={{ width: 250, height: 450, m: 5 }}>
-      <CardActionArea
-        sx={{ height: "100%" }}
-        onMouseEnter={() => setToggleLinks(true)}
-        onMouseLeave={() => setToggleLinks(false)}
+    <div>
+      <Card
+        onMouseOverCapture={() => setToggleLinks((state) => true)}
+        onMouseOutCapture={() => setToggleLinks((state) => false)}
+        sx={{ width: 270, height: 450, mr: 5 }}
       >
-        {!toggleLinks && (
-          <>
-            {" "}
-            <CardMedia
-              component="img"
-              height="140"
-              image={picture}
-              alt="student"
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant="body2"
-                color="text.secondary"
-                sx={{ pb: 2 }}
-              >
-                {info1}
-              </Typography>
-              <Typography variant="h6" sx={{ height: 90, fontWeight: "bold" }}>
-                {info2}
-              </Typography>
-              <Typography variant="body1" sx={{ fontWeight: "bold", pb: 2 }}>
-                {info3}
-              </Typography>
-              <Grid
-                container
-                direction="row"
-                justifyContent="flex-start"
-                alignItems="center"
-                sx={{ pb: 2 }}
-              >
-                <Grid item sx={{ m: 0, p: 0 }}>
-                  <StarIcon sx={{ color: "#F9851A" }} />
-                  <StarIcon sx={{ color: "#F9851A" }} />
-                  <StarIcon sx={{ color: "#F9851A" }} />
-                  <StarIcon sx={{ color: "#F9851A" }} />
-                  <StarHalfIcon sx={{ color: "#f9851a" }} />
-                </Grid>
-                <Grid item>
-                  <Typography variant="body1">
-                    {info4} ({info5})
-                  </Typography>
-                </Grid>
-              </Grid>
-              <Typography variant="body1" color="text.secondary" sx={{ pb: 2 }}>
-                {info6}
-              </Typography>{" "}
-              <Typography variant="body1" color="text.secondary">
-                {info7}
-              </Typography>
-            </CardContent>
-          </>
-        )}
-        {toggleLinks && (
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-              backgroundColor: "#0D2137",
-            }}
-          >
-            <CardContent sx={{ lineHeight: 20 }}>
-              <Box
-                sx={{
-                  boxShadow: 3,
-                  textAlign: "center",
-                  px: 4,
-                  py: 1,
-                  borderRadius: 2,
-                  borderBottom: "5px solid #FFE483",
-                  backgroundColor: "white",
-                }}
-              >
-                <Typography gutterBottom variant="body2">
-                  {link1}
+        <CardActionArea sx={{ height: "100%" }}>
+          {!toggleLinks && (
+            <>
+              {" "}
+              <CardMedia
+                component="img"
+                height="140"
+                image={picture}
+                alt="student"
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ pb: 2 }}
+                >
+                  {info1}
                 </Typography>
-              </Box>
-              <Box
-                sx={{
-                  boxShadow: 3,
-                  textAlign: "center",
-                  px: 4,
-                  py: 1,
-                  mt: 3,
-                  borderRadius: 2,
-                  borderBottom: "5px solid #009FAD",
-                  backgroundColor: "white",
-                }}
-              >
-                <Typography variant="body2">{link2}</Typography>
-              </Box>
-            </CardContent>
-          </Box>
-        )}
-      </CardActionArea>
-    </Card>
+                <Typography
+                  variant="h6"
+                  sx={{ height: 90, fontWeight: "bold" }}
+                >
+                  {info2}
+                </Typography>
+                <Typography variant="body1" sx={{ fontWeight: "bold", pb: 2 }}>
+                  {info3}
+                </Typography>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="flex-start"
+                  alignItems="center"
+                  sx={{ pb: 2 }}
+                >
+                  <Grid item sx={{ m: 0, p: 0 }}>
+                    <StarIcon sx={{ color: "#F9851A" }} />
+                    <StarIcon sx={{ color: "#F9851A" }} />
+                    <StarIcon sx={{ color: "#F9851A" }} />
+                    <StarIcon sx={{ color: "#F9851A" }} />
+                    <StarHalfIcon sx={{ color: "#f9851a" }} />
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body1">
+                      {info4} ({info5})
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Typography
+                  variant="body1"
+                  color="text.secondary"
+                  sx={{ pb: 2 }}
+                >
+                  {info6}
+                </Typography>{" "}
+                <Typography variant="body1" color="text.secondary">
+                  {info7}
+                </Typography>
+              </CardContent>
+            </>
+          )}
+          {toggleLinks && (
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100%",
+                backgroundColor: "#0D2137",
+              }}
+            >
+              <CardContent sx={{ lineHeight: 20 }}>
+                <Box
+                  sx={{
+                    boxShadow: 3,
+                    textAlign: "center",
+                    px: 4,
+                    py: 1,
+                    borderRadius: 2,
+                    borderBottom: "5px solid #FFE483",
+                    backgroundColor: "white",
+                  }}
+                >
+                  <Typography gutterBottom variant="body2">
+                    {link1}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    boxShadow: 3,
+                    textAlign: "center",
+                    px: 4,
+                    py: 1,
+                    mt: 3,
+                    borderRadius: 2,
+                    borderBottom: "5px solid #009FAD",
+                    backgroundColor: "white",
+                  }}
+                >
+                  <Typography variant="body2">{link2}</Typography>
+                </Box>
+              </CardContent>
+            </Box>
+          )}
+        </CardActionArea>
+      </Card>
+    </div>
   );
 }
 
