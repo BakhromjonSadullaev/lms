@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { CardActionArea } from "@mui/material";
+
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import Grid from "@mui/material/Grid";
 import picture from "../../../assets/students.jpg";
+
+import styles from "./ActionAreaCard.module.css";
 
 function ActionAreaCard({
   info1,
@@ -20,121 +21,67 @@ function ActionAreaCard({
   info7,
   link1,
   link2,
-  bool,
 }) {
-  const [toggleLinks, setToggleLinks] = useState(bool);
   return (
     <div>
-      <Card
-        onMouseOverCapture={() => setToggleLinks((state) => true)}
-        onMouseOutCapture={() => setToggleLinks((state) => false)}
-        sx={{ width: 270, height: 450, mr: 5 }}
-      >
-        <CardActionArea sx={{ height: "100%" }}>
-          {!toggleLinks && (
-            <>
-              {" "}
-              <CardMedia
-                component="img"
-                height="140"
-                image={picture}
-                alt="student"
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{ pb: 2 }}
-                >
-                  {info1}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{ height: 90, fontWeight: "bold" }}
-                >
-                  {info2}
-                </Typography>
-                <Typography variant="body1" sx={{ fontWeight: "bold", pb: 2 }}>
-                  {info3}
-                </Typography>
-                <Grid
-                  container
-                  direction="row"
-                  justifyContent="flex-start"
-                  alignItems="center"
-                  sx={{ pb: 2 }}
-                >
-                  <Grid item sx={{ m: 0, p: 0 }}>
-                    <StarIcon sx={{ color: "#F9851A" }} />
-                    <StarIcon sx={{ color: "#F9851A" }} />
-                    <StarIcon sx={{ color: "#F9851A" }} />
-                    <StarIcon sx={{ color: "#F9851A" }} />
-                    <StarHalfIcon sx={{ color: "#f9851a" }} />
-                  </Grid>
-                  <Grid item>
-                    <Typography variant="body1">
-                      {info4} ({info5})
-                    </Typography>
-                  </Grid>
-                </Grid>
-                <Typography
-                  variant="body1"
-                  color="text.secondary"
-                  sx={{ pb: 2 }}
-                >
-                  {info6}
-                </Typography>{" "}
-                <Typography variant="body1" color="text.secondary">
-                  {info7}
-                </Typography>
-              </CardContent>
-            </>
-          )}
-          {toggleLinks && (
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-                backgroundColor: "#0D2137",
-              }}
+      <Card sx={{ width: 270, height: 470, mr: 5 }} className={styles.card}>
+        <div className={styles.cardOverlay}>
+          <button className={`${styles.btn} ${styles.btn1}`}>
+            강의 상세보기
+          </button>
+          <button className={`${styles.btn} ${styles.btn2}`}>수강신청</button>
+        </div>
+        <>
+          {" "}
+          <CardMedia
+            component="img"
+            height="140"
+            image={picture}
+            alt="student"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="body2"
+              color="text.secondary"
+              sx={{ pb: 2 }}
             >
-              <CardContent sx={{ lineHeight: 20 }}>
-                <Box
-                  sx={{
-                    boxShadow: 3,
-                    textAlign: "center",
-                    px: 4,
-                    py: 1,
-                    borderRadius: 2,
-                    borderBottom: "5px solid #FFE483",
-                    backgroundColor: "white",
-                  }}
-                >
-                  <Typography gutterBottom variant="body2">
-                    {link1}
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    boxShadow: 3,
-                    textAlign: "center",
-                    px: 4,
-                    py: 1,
-                    mt: 3,
-                    borderRadius: 2,
-                    borderBottom: "5px solid #009FAD",
-                    backgroundColor: "white",
-                  }}
-                >
-                  <Typography variant="body2">{link2}</Typography>
-                </Box>
-              </CardContent>
-            </Box>
-          )}
-        </CardActionArea>
+              {info1}
+            </Typography>
+            <Typography variant="h6" sx={{ height: 90, fontWeight: "bold" }}>
+              {info2}
+            </Typography>
+            <Typography variant="body1" sx={{ fontWeight: "bold", pb: 2 }}>
+              {info3}
+            </Typography>
+            <Grid
+              container
+              direction="row"
+              justifyContent="flex-start"
+              alignItems="center"
+              sx={{ pb: 2 }}
+            >
+              <Grid item sx={{ m: 0, p: 0 }}>
+                <StarIcon sx={{ color: "#F9851A" }} />
+                <StarIcon sx={{ color: "#F9851A" }} />
+                <StarIcon sx={{ color: "#F9851A" }} />
+                <StarIcon sx={{ color: "#F9851A" }} />
+                <StarHalfIcon sx={{ color: "#f9851a" }} />
+              </Grid>
+              <Grid item>
+                <Typography variant="body1">
+                  {info4} ({info5})
+                </Typography>
+              </Grid>
+            </Grid>
+            <Typography variant="body1" color="text.secondary" sx={{ pb: 2 }}>
+              {info6}
+            </Typography>{" "}
+            <Typography variant="body1" color="text.secondary">
+              {info7}
+            </Typography>
+          </CardContent>
+        </>
       </Card>
     </div>
   );

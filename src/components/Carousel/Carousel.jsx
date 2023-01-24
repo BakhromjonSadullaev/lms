@@ -18,7 +18,6 @@ function CarouselComponet({ title }) {
       info7: "수강신청 : 10/1 ~ 10/19",
       link1: "강의 상세보기",
       link2: "수강신청",
-      bool: false,
     },
     {
       info1: "3D Interaction Design",
@@ -30,7 +29,6 @@ function CarouselComponet({ title }) {
       info7: "수강신청 : 10/1 ~ 10/19",
       link1: "강의 상세보기",
       link2: "수강신청",
-      bool: false,
     },
     {
       info1: "3D Modeling",
@@ -42,7 +40,6 @@ function CarouselComponet({ title }) {
       info7: "수강신청 : 10/1 ~ 10/19",
       link1: "강의 상세보기",
       link2: "수강신청",
-      bool: false,
     },
     {
       info1: "Smart UX Design",
@@ -54,7 +51,6 @@ function CarouselComponet({ title }) {
       info7: "수강신청 : 10/1 ~ 10/19",
       link1: "강의 상세보기",
       link2: "수강신청",
-      bool: false,
     },
     {
       info1: "VR/MR Project Planning",
@@ -66,7 +62,6 @@ function CarouselComponet({ title }) {
       info7: "수강신청 : 10/1 ~ 10/19",
       link1: "강의 상세보기",
       link2: "수강신청",
-      bool: false,
     },
     {
       info1: "3D Interaction Design",
@@ -78,7 +73,6 @@ function CarouselComponet({ title }) {
       info7: "수강신청 : 10/1 ~ 10/19",
       link1: "강의 상세보기",
       link2: "수강신청",
-      bool: false,
     },
     {
       info1: "3D Modeling",
@@ -90,7 +84,6 @@ function CarouselComponet({ title }) {
       info7: "수강신청 : 10/1 ~ 10/19",
       link1: "강의 상세보기",
       link2: "수강신청",
-      bool: false,
     },
     {
       info1: "Smart UX Design",
@@ -102,7 +95,6 @@ function CarouselComponet({ title }) {
       info7: "수강신청 : 10/1 ~ 10/19",
       link1: "강의 상세보기",
       link2: "수강신청",
-      bool: false,
     },
   ];
 
@@ -167,21 +159,25 @@ function CarouselComponet({ title }) {
               show: true,
               itemBtnProps: {
                 style: {
-                  height: 16,
-                  width: 16,
-                  borderRadius: "50%",
+                  height: 10,
+                  width: 10,
+                  borderRadius: "100%",
                   border: 0,
                   marginRight: 10,
+                  marginTop: 10,
+                  backgroundColor: "#005A8D",
                 },
               },
               activeItemBtnProps: {
                 style: {
-                  height: 16,
-                  width: 16,
-                  borderRadius: "50%",
+                  height: 10,
+                  width: 10,
+                  borderRadius: "100%",
                   border: 0,
                   background: "black",
                   marginRight: 10,
+                  marginTop: 10,
+                  backgroundColor: "#0D2137",
                 },
               },
             }}
