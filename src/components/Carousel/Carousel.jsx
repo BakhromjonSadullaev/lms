@@ -99,7 +99,7 @@ function CarouselComponet({ title }) {
   ];
 
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" sx={{ margin: "45px auto" }}>
       <Grid
         container
         direction="column"
