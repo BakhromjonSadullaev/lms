@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
-      <Carousel title="추천강의" />
     </div>
   );
 }

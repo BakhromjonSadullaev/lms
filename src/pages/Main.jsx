@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "../components/Banner/Banner";
-import Card from "../components/Card/Card";
 import CarouselComponet from "../components/Carousel/Carousel";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
@@ -15,7 +14,6 @@ const Main = () => {
       <Header />
       <HeaderSlider />
       <Search />
-      {/* <Card /> */}
       <CarouselComponet title="추천강의" />
       <CarouselComponet title="추천강의" />
       <CarouselComponet title="추천강의" />
