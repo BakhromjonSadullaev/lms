@@ -107,7 +107,7 @@ function CarouselComponet({ title }) {
         alignItems="flex-start"
       >
         <Grid item>
-          <h1>{title}</h1>
+          <h1 style={{ fontSize: "32px", marginBottom: "2rem" }}>{title}</h1>
         </Grid>
         <Grid item>
           <Carousel
