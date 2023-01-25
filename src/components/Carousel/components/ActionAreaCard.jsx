@@ -29,7 +29,6 @@ function ActionAreaCard({
   const images = importAll(
     require.context("../../../assets", false, /\.(png|jpe?g|svg)$/)
   );
-
   return (
     <div>
       <Card sx={{ width: 270, height: 470, mr: 5 }} className={styles.card}>
