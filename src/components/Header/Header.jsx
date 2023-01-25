@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BsBellFill, BsGlobe2 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 import profile from "../../assets/images/profile.png";
 import logo from "../../assets/images/NSU-LOGO.png";
@@ -59,7 +60,12 @@ const Header = () => {
               onMouseOver={() => selectLink(id)}
               onMouseLeave={() => leaveMouse(arr)}
             >
-              {title}
+              {id === 2 && title === "강의" ? (
+                <Link to={`classes`}>{title}</Link>
+              ) : (
+                <div>{title}</div>
+              )}
+
               <span className={` ${isHover ? styles.hovered : styles.hidden}`}>
                 {items?.map((linkName, idx) => {
                   return (
