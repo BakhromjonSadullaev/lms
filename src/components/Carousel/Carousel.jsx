@@ -99,7 +99,7 @@ function CarouselComponet({ title }) {
   ];
 
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" sx={{ margin: "45px auto" }}>
       <Grid
         container
         direction="column"
@@ -107,7 +107,7 @@ function CarouselComponet({ title }) {
         alignItems="flex-start"
       >
         <Grid item>
-          <h1>{title}</h1>
+          <h1 style={{ fontSize: "32px", marginBottom: "2rem" }}>{title}</h1>
         </Grid>
         <Grid item>
           <Carousel
