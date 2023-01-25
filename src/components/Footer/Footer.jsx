@@ -1,6 +1,6 @@
 import React from "react";
 import { BsYoutube, BsFacebook, BsInstagram } from "react-icons/bs";
-import footerLogo from "../../Assets/images/footer-logo.png";
+import footerLogo from "../../assets/images/footer-logo.png";
 
 import styles from "./styles.module.scss";
 

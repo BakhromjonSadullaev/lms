@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 
-import videoImg from "../../Assets/images/video-img.png";
+import videoImg from "../../assets/images/video-img.png";
 import styles from "./styles.module.scss";
 
 const Video = () => {

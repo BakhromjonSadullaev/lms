@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { BsBellFill, BsGlobe2 } from "react-icons/bs";
 
-import profile from "../../Assets/images/profile.png";
-import logo from "../../Assets/images/NSU-LOGO.png";
-import nameLogo from "../../Assets/images/N-MOOC.png";
+import profile from "../../assets/images/profile.png";
+import logo from "../../assets/images/NSU-LOGO.png";
+import nameLogo from "../../assets/images/N-MOOC.png";
 
 import styles from "./Header.module.scss";
 
