@@ -3,18 +3,46 @@
   height: fit-content;
   display: flex;
   justify-content: end;
-}
-.sidebar {
-  width: 17%;
-  height: 411px;
-  border: 1px solid red;
-}
-.listOfClasses {
-  width: 80%;
-  padding: 32px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px 0;
-  flex-wrap: wrap;
+
+  .sidebar {
+    width: 15%;
+    margin: 45px 16px;
+    // height: 411px;
+
+    .findClass {
+      font-family: "Noto Sans KR";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 29px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 45px;
+
+      color: #000000;
+      .className {
+        font-family: "Noto Sans KR";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 29px;
+
+        color: #000000;
+      }
+    }
+  }
+
+  .listOfClasses {
+    width: 80%;
+    height: 65rem;
+    margin: 24px 0;
+    padding: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    place-items: center;
+    align-items: center;
+    gap: 12px 0;
+    flex-wrap: wrap;
+  }
 }
